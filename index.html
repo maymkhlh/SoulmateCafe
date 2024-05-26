@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soulmate Coffee Shop</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="w3-bar w3-light-grey">
+    <a href="index.html" class="w3-bar-item w3-button"><img src="images/logo.png" alt="Soulmate Logo" style="height: 30px; vertical-align: middle;"></a>
+    <a href="index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="about.html" class="w3-bar-item w3-button">About</a>
+    <a href="contact.html" class="w3-bar-item w3-button">Contact Us</a>
+    <a href="menu.html" class="w3-bar-item w3-button">Menu</a>
+  </nav>
+
+  <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+    <img class="w3-image" src="images/slide1.jpg" alt="Coffee Shop" width="1500" height="800">
+    <div class="w3-display-middle w3-margin-top w3-center">
+      <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>SOULMATE</b></span> <span class="w3-hide-small w3-text-light-grey">Coffee Shop</span></h1>
+    </div>
+  </header>
+
+  <div class="w3-content w3-padding" style="max-width:1100px">
+    <div class="w3-container w3-padding-32" id="about">
+      <img src="images/logo.png" alt="Soulmate Logo" style="width: 150px; display: block; margin-left: auto; margin-right: auto;">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Welcome to Soulmate Coffee Shop</h3>
+      <p>Soulmate Coffee Shop offers a perfect blend of taste and ambiance. Our mission is to provide a cozy atmosphere where you can enjoy high-quality coffee and delicious pastries. We believe in creating a space where people can connect, relax, and enjoy the little moments in life.</p>
+    </div>
+  </div>
+
+  <div class="w3-content w3-display-container" style="max-width:1000px;">
+    <div class="mySlides">
+      <img src="images/slide1.jpg" style="width:100%">
+      <div class="w3-display-bottomleft w3-container w3-text-white">
+        <h3>Our Coffee Shop</h3>
+        <p>Enjoy a perfect cup of coffee in our cozy and welcoming cafe.</p>
+      </div>
+    </div>
+    <div class="mySlides">
+      <img src="images/slide2.jpg" style="width:100%">
+      <div class="w3-display-bottomleft w3-container w3-text-white">
+        <h3>State-of-the-Art Coffee Machines</h3>
+        <p>Experience the finest coffee brewed with our top-of-the-line machines.</p>
+      </div>
+    </div>
+    <div class="mySlides">
+      <img src="images/slide3.jpg" style="width:100%">
+      <div class="w3-display-bottomleft w3-container w3-text-white">
+        <h3>Delicious Foods and Drinks</h3>
+        <p>Indulge in our wide variety of freshly made foods and drinks.</p>
+      </div>
+    </div>
+    <div class="mySlides">
+      <img src="images/slide4.jpg" style="width:100%">
+      <div class="w3-display-bottomleft w3-container w3-text-white">
+        <h3>Cozy Ambiance</h3>
+        <p>Relax and enjoy your time with friends in our cozy atmosphere.</p>
+      </div>
+    </div>
+    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+  </div>
+
+  <footer class="w3-center w3-light-grey w3-padding-32">
+    <p>Powered by <a href="#" target="_blank" class="w3-hover-text-green">Soulmate Coffee Shop</a></p>
+  </footer>
+
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      x[slideIndex-1].style.display = "block";  
+    }
+  </script>
+</body>
+</html>
